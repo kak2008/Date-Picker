@@ -16,12 +16,31 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    datePicker = [[UIDatePicker alloc]init];
+    datePicker.datePickerMode = UIDatePickerModeDate;
+    [self.datePickerTextField setInputView:datePicker];
+    
+    UIToolbar *toolbar = [[UIToolbar alloc]initWithFrame:CGRectMake(0, 0, 320, 44)];
+    [toolbar setTintColor: [UIColor orangeColor]];
+    UIBarButtonItem *doneButton = [[UIBarButtonItem alloc]initWithTitle:@"Done"
+                                                                  style:UIBarButtonItemStyleDone
+                                                                 target:self
+                                                                 action:@selector(showSelectedDate)];
+    UIBarButtonItem *space = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace
+                                                                          target:nil
+                                                                          action:nil];
+    [toolbar setItems:[NSArray arrayWithObjects:space, doneButton, nil]];
+    [self.datePickerTextField setInputAccessoryView:toolbar];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)showSelectedDate
+{
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
+    [dateFormatter setDateFormat:@"dd/MMM/YYYY hh:min a"];
+    self.datePickerTextField.text = [NSString stringWithFormat:@"%@",[dateFormatter stringFromDate:datePicker.date]];
+    [self.datePickerTextField resignFirstResponder];
 }
+
 
 @end

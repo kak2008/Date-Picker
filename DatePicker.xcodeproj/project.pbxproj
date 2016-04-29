@@ -101,15 +101,10 @@
 		F8DAFC561C2B6D4900C8BCC0 /* DatePicker */ = {
 			isa = PBXGroup;
 			children = (
-				F8DAFC5A1C2B6D4900C8BCC0 /* AppDelegate.h */,
-				F8DAFC5B1C2B6D4900C8BCC0 /* AppDelegate.m */,
-				F8DAFC5D1C2B6D4900C8BCC0 /* ViewController.h */,
-				F8DAFC5E1C2B6D4900C8BCC0 /* ViewController.m */,
-				F8DAFC601C2B6D4900C8BCC0 /* Main.storyboard */,
-				F8DAFC631C2B6D4900C8BCC0 /* Assets.xcassets */,
-				F8DAFC651C2B6D4900C8BCC0 /* LaunchScreen.storyboard */,
-				F8DAFC681C2B6D4900C8BCC0 /* Info.plist */,
+				F8DAFC8A1C2B6D5700C8BCC0 /* AppDelegate */,
+				F8DAFC8E1C2B6DB300C8BCC0 /* Resources */,
 				F8DAFC571C2B6D4900C8BCC0 /* Supporting Files */,
+				F8DAFC8D1C2B6D9C00C8BCC0 /* ViewController */,
 			);
 			path = DatePicker;
 			sourceTree = "<group>";
@@ -138,6 +133,35 @@
 				F8DAFC7E1C2B6D4900C8BCC0 /* Info.plist */,
 			);
 			path = DatePickerUITests;
+			sourceTree = "<group>";
+		};
+		F8DAFC8A1C2B6D5700C8BCC0 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				F8DAFC5A1C2B6D4900C8BCC0 /* AppDelegate.h */,
+				F8DAFC5B1C2B6D4900C8BCC0 /* AppDelegate.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		F8DAFC8D1C2B6D9C00C8BCC0 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F8DAFC5D1C2B6D4900C8BCC0 /* ViewController.h */,
+				F8DAFC5E1C2B6D4900C8BCC0 /* ViewController.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		F8DAFC8E1C2B6DB300C8BCC0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F8DAFC601C2B6D4900C8BCC0 /* Main.storyboard */,
+				F8DAFC631C2B6D4900C8BCC0 /* Assets.xcassets */,
+				F8DAFC651C2B6D4900C8BCC0 /* LaunchScreen.storyboard */,
+				F8DAFC681C2B6D4900C8BCC0 /* Info.plist */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,6 +231,7 @@
 				TargetAttributes = {
 					F8DAFC531C2B6D4900C8BCC0 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = A4M82R9CY7;
 					};
 					F8DAFC6C1C2B6D4900C8BCC0 = {
 						CreatedOnToolsVersion = 7.2;
@@ -413,10 +438,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = DatePicker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Anish.DatePicker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -424,10 +452,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = DatePicker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Anish.DatePicker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
