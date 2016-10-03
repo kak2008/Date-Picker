@@ -1,5 +1,5 @@
 # Date-Picker
-Date picker project first update
+Date picker is a sample project which is mainly focused on Date - Picker.
 
 ### Requirements
 
