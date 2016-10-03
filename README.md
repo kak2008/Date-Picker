@@ -3,8 +3,8 @@ Date picker project first update
 
 ### Requirements
 
-Xcode 7.3
-Objective - C
+* Xcode 7.3
+* Objective - C
 
 ### License
 
